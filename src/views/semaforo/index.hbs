@@ -1,0 +1,51 @@
+<div class="load-view-semaforo max-w-7xl mx-auto sm:px-6 lg:px-8 pb-12">
+  <div class="mt-10 text-center">
+    <span class="font-semibold rounded-full mt-12 py-3 pl-8 pr-4">
+      <strong>SEMAFORO</strong>
+      <a href="/nav/menu_supervisor_linea" class="ml-2">
+        <ion-icon name="home-outline"></ion-icon>
+      </a>
+    </span>
+  </div>
+  <div class="overflow-hidden shadow-xl sm:rounded-lg mt-7">
+    <section class="w-full text-center pt-10 pb-16">
+      {{#if green}}
+        <button class="semaforo-on w-20 h-20 rounded-full mx-12 mt-9" style="--color-semaforo:{{green}}"></button>
+      {{else}}
+        <button class="semaforo-off w-20 h-20 rounded-full mx-12 mt-9"></button>
+      {{/if}}
+      {{#if yellow}}
+        <button class="semaforo-on w-20 h-20 rounded-full mx-12 mt-9" style="--color-semaforo:{{yellow}}"></button>
+      {{else}}
+        <button class="semaforo-off w-20 h-20 rounded-full mx-12 mt-9"></button>
+      {{/if}}
+      {{#if red}}
+        <button class="semaforo-on w-20 h-20 rounded-full mx-12 mt-9" style="--color-semaforo:{{red}}"></button>
+      {{else}}
+        <button class="semaforo-off w-20 h-20 rounded-full mx-12 mt-9"></button>
+      {{/if}}
+    </section>
+  </div>
+  <div class="info mt-4 max-w-7xl mx-auto text-center">
+    <span class="font-semibold rounded-full mt-12 py-2 px-12">
+      {{message}}
+    </span>
+  </div>
+  <div class="mt-10 max-w-7xl mx-auto sm:px-6 lg:px-8 text-center">
+    <span class="values-semaforo font-semibold sm:rounded-lg mt-12 py-7 px-3">
+      {{#if estado}}
+        <a href="/semaforo" class="rounded-lg text-lg font-semibold p-3 my-3" style="--color-semaforo:aqua">DETENER SEMAFORO</a>
+      {{else}}
+        <a href="semaforo/comprobar/3" class="font-bold rounded-md text-lg font-semibold p-3 my-3" style="--color-semaforo:green">3</a>
+        <a href="semaforo/comprobar/4" class="font-bold rounded-md text-lg font-semibold p-3 my-3" style="--color-semaforo:green">4</a>
+        <a href="semaforo/comprobar/5" class="font-bold rounded-md text-lg font-semibold p-3 my-3" style="--color-semaforo:green">5</a>
+        <a href="semaforo/comprobar/6" class="font-bold rounded-md text-lg font-semibold p-3 my-3" style="--color-semaforo:green">6</a>
+        <a href="semaforo/comprobar/7" class="font-bold rounded-md text-lg font-semibold p-3 my-3" style="--color-semaforo:yellow">7</a>
+        <a href="semaforo/comprobar/8" class="font-bold rounded-md text-lg font-semibold p-3 my-3" style="--color-semaforo:yellow">8</a>
+        <a href="semaforo/comprobar/9" class="font-bold rounded-md text-lg font-semibold p-3 my-3" style="--color-semaforo:yellow">9</a>
+        <a href="semaforo/comprobar/10" class="font-bold rounded-md text-lg font-semibold p-3 my-3" style="--color-semaforo:yellow">10</a>
+        <a href="semaforo/comprobar/11" class="font-bold rounded-md text-lg font-semibold p-3 my-3" style="--color-semaforo:red">11</a>
+      {{/if}}
+    </span>
+  </div>
+</div>

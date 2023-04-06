@@ -1,0 +1,53 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+  <div class="content-tabla overflow-hidden shadow-xl mt-8 rounded-lg">
+    <table class="tabla table-fixed w-full">
+      <thead>
+        <tr>
+          <th class="w-1/12 py-2">NUMERO</th>
+          <th class="py-2">FECHA INICIO</th>
+          <th class="w-1/12 py-2">ESTADO</th>
+          <th class="py-2">MODELO</th>
+          <th class="py-2">COLOR</th>
+          <th class="w-1/12 py-2">LINEA</th>
+          <th class="py-2">EMPLEADO</th>
+          <th class="w-1/12 pb-2 pt-3">
+            <a href="/orden_de_produccion/create">
+              <ion-icon class="mx-1" name="add-outline"></ion-icon>
+            </a>
+            <a href="/nav/menu_supervisor_linea">
+              <ion-icon class="mx-1" name="home-outline"></ion-icon>
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#with ordenes_de_produccion}}
+          <tr>
+            <td class="text-center">{{numero}}</td>
+            <td class="text-center">{{fecha_inicio}}</td>
+            <td class="text-center">{{estado}}</td>
+            <td class="text-center">{{modelo.denominacion}}</td>
+            <td class="text-center">{{color.descripcion}}</td>
+            <td class="text-center">{{linea.numero}}</td>
+            <td class="text-center">{{empleado.dni}}</td>
+            <td class="py-1 flex justify-center">
+              <a href="/orden_de_produccion/edit/{{numero}}" class="px-3 py-1">
+                <ion-icon name="pencil-outline"></ion-icon>
+              </a>
+            </td>
+          </tr>
+        {{/with}}
+      </tbody>
+    </table>
+    {{#if numero_orden_de_produccion}}
+      <div class="my-6 mx-auto text-center">
+        <a href="/orden_de_produccion/reiniciar_semaforo/{{numero_orden_de_produccion}}" class="config-orden p-2 rounded-lg">
+          <span class="font-semibold pl-2">
+            <ion-icon class="mx-1" name="settings-outline"></ion-icon>
+            <strong>SOLUCIONAR PROBLEMAS EN LA ORDEN DE PRODUCCION</strong>
+          </span>
+        </a>
+      </div>
+    {{/if}}
+  </div>
+</div>

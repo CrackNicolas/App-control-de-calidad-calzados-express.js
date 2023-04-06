@@ -1,0 +1,15 @@
+<div class="create block mx-auto my-12 px-4 py-3 w-1/3 rounded-lg shadow-lg">
+    <div class="icon-form">
+        <ion-icon name="add-outline"></ion-icon>
+    </div>
+    <h1 class="text-center text-3xl font-bold">CREAR DEFECTO</h1>
+    <form action="" method="POST" class="mt-4">
+        <input type="text" class="rounded-md w-full text-lg placeholder-gray-500 p-2 my-2" placeholder="Descripcion..." name="descripcion">
+        <select class="rounded-md w-full text-lg my-2" name="tipo_defecto"> 
+          <option class="text-gray-500" selected>Seleccionar tipo de defecto</option>
+          <option value="Observado">Observado</option> 
+          <option value="Reproceso">Reproceso</option> 
+        </select>
+        {{>buttons_abm ruta = "defecto" button = "REGISTRAR"}}
+    </form>
+</div>

@@ -1,0 +1,36 @@
+<div class="create block mx-auto my-12 px-4 py-3 w-1/3 rounded-lg shadow-lg">
+  <div class="icon-form">
+    <ion-icon name="refresh-outline"></ion-icon>
+  </div>
+  <h1 class="text-center text-3xl font-bold">EDITAR ORDEN</h1>
+  <form action="" method="POST" class="mt-4 form-op">
+    {{#if option_1}}
+      <div class="grid grid-cols-2">
+        <input type="radio" name="estado" id="1" value="Pausada"/>
+        <input type="radio" name="estado" id="2" value="Finalizada"/>
+      </div>
+      <div class="tablero grid grid-cols-2 mt-3 mb-5 rounded-md">
+        <label for="1" class="text-center pb-7 pt-8 rounded-md">
+          <ion-icon name="pause-outline"></ion-icon>
+          <p>Pausar</p>
+        </label>
+        <label for="2" class="text-center pb-7 pt-8 rounded-md">
+          <ion-icon name="power-outline"></ion-icon>
+          <p>Finalizar</p>
+        </label>
+      </div>
+    {{/if}}
+    {{#if option_2}}
+      <div class="grid grid-cols-1">
+        <input type="radio" name="estado" id="1" value="Iniciada"/>
+      </div>
+      <div class="tablero grid grid-cols-1 mt-3 mb-5 rounded-md">
+        <label for="1" class="text-center pb-7 pt-8 rounded-md">
+          <ion-icon name="play-outline"></ion-icon>
+          <p>Reanudar</p>
+        </label>
+      </div>
+    {{/if}}
+    {{>buttons_abm ruta = "orden_de_produccion" button = "ACTUALIZAR"}}
+  </form>
+</div>

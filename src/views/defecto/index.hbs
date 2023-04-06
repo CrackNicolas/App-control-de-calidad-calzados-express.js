@@ -1,0 +1,36 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+  <div class="content-tabla overflow-hidden shadow-xl mt-8 rounded-lg">
+    <table class="tabla table-fixed w-full">
+      <thead>
+        <tr>
+          <th class="py-2">DESCRIPCION</th>
+          <th class="py-2">TIPO DE DEFECTO</th>
+          <th class="w-1/12 py-2">
+            <a href="/defecto/create">
+              <ion-icon class="mx-1" name="add-outline"></ion-icon>
+            </a>
+            <a href="/nav/menu_supervisor_calidad">
+              <ion-icon class="mx-1" name="home-outline"></ion-icon>
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each defectos}}
+          <tr>
+            <td class="text-center">{{descripcion}}</td>
+            <td class="text-center">{{tipo_defecto}}</td>
+            <td class="py-1 flex justify-center">
+              <form action="/defecto/delete" method="POST" class="mx-2">
+                <input type="hidden" value="{{descripcion}}" name="descripcion">
+                <button class="px-3 py-1" type="submit">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </form>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{{#if message}}
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-5 mb-1">
+        <div class="style-mensaje text-white flex rounded py-1 px-4" style="--color-mensaje:{{color}}">
+            <p class="self-center">
+                <strong>{{message}}</strong>
+                {{#if icon}}
+                    😉
+                {{else}}
+                    ☹️
+                {{/if}}
+            </p>
+        </div>
+    </div>
+{{/if}}

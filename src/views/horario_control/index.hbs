@@ -1,0 +1,44 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+  <div class="content-tabla overflow-hidden shadow-xl mt-8 rounded-lg">
+    <table class="tabla table-fixed w-full">
+      <thead>
+        <tr>
+          <th class="py-2">LINEA DE PRODUCCION</th>
+          <th class="py-2">ORDEN DE PRODUCCION</th>
+          <th class="w-1/12 py-2">
+            <a href="/nav/menu_supervisor_calidad">
+              <ion-icon class="mx-1" name="home-outline"></ion-icon>
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#if icon}}
+          {{#each ordenes_de_produccion}}
+            <tr>
+              <td class="text-center">{{linea}}</td>
+              <td class="text-center">{{numero}}</td>
+              <td class="py-1 flex justify-center">
+                <a href="/horario_control/update/{{numero}}" class="asociar px-3 pb-1 pt-2 mx-2">
+                  <ion-icon name="close-outline"></ion-icon>
+                </a>
+              </td>
+            </tr>
+          {{/each}}
+        {{else}}
+          {{#each ordenes_de_produccion}}
+            <tr>
+              <td class="text-center">{{linea}}</td>
+              <td class="text-center">{{numero}}</td>
+              <td class="py-1 flex justify-center">
+                <a href="/horario_control/update/{{numero}}" class="asociar px-3 pb-1 pt-2 mx-2">
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+              </td>
+            </tr>
+          {{/each}}
+        {{/if}}
+      </tbody>
+    </table>
+  </div>
+</div>

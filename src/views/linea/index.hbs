@@ -1,0 +1,34 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+  <div class="content-tabla overflow-hidden shadow-xl mt-8 rounded-lg">
+    <table class="tabla table-fixed w-full">
+      <thead>
+        <tr>
+          <th class="w-20 py-2">NUMERO DE LINEA DE PRODUCCION</th>
+          <th class="w-1/12 py-2">
+            <a href="/linea/create">
+              <ion-icon class="mx-2" name="add-outline"></ion-icon>
+            </a>
+            <a href="/nav/menu_supervisor_linea">
+              <ion-icon class="mx-2" name="home-outline"></ion-icon>
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each lineas}}
+          <tr>
+            <td class="text-center">{{numero}}</td>
+            <td class="py-1 flex justify-center">
+              <form action="/linea/delete" method="POST" class="mx-2">
+                <input type="hidden" value="{{numero}}" name="numero">
+                <button class="px-3 py-1" type="submit">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </form>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

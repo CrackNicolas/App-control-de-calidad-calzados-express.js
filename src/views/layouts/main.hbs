@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+    <link id="icon-favicon" rel="icon" href="https://images.pexels.com/photos/12891494/pexels-photo-12891494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" type="image/png"/>
+    <link rel="stylesheet" href="/main.css" type="text/css">
+    <title>Control de calidad</title>
+  </head>
+  <body>
+    <nav class="header pt-5 pb-12 text-white">
+      <div class="flex w-50 float-left ml-10">
+        <span class="text-2xl font-bold">
+          <ion-icon class="logo" name="footsteps-outline"></ion-icon>
+          <strong>CONTROL DE CALIDAD</strong>
+        </span>
+      </div>
+      <div class="cerrar-sesion flex w-50 float-right mr-8">
+        <ion-icon name="walk-outline"></ion-icon>
+        <a class="link mt-1 font-bold" href="/log/cerrar_session">CERRAR SESION</a>
+      </div>
+    </nav>
+    {{>messages}}
+    {{{body}}}
+  </body>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>

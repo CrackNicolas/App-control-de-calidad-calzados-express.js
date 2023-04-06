@@ -1,0 +1,28 @@
+<div class="create block mx-auto my-12 px-4 py-3 w-1/3 rounded-lg shadow-lg">
+    <div class="icon-form">
+        <ion-icon name="add-outline"></ion-icon>
+    </div>
+    <h1 class="text-center text-3xl font-bold">CREAR ORDEN</h1>
+    <form action="" method="POST" class="mt-4">
+        <select class="rounded-md w-full text-lg placeholder-gray-500 p-2 my-2" name="linea"> 
+          <option class="text-gray-500" selected>Seleccionar linea</option>
+          {{#each lineas}}
+            <option value={{numero}}>{{numero}}</option> 
+          {{/each}}
+        </select>
+        <input type="text" class="rounded-md w-full text-lg placeholder-gray-500 p-2 my-2" placeholder="Numero..." name="numero">
+        <select class="rounded-md w-full text-lg placeholder-gray-500 p-2 my-2" name="modelo"> 
+          <option class="text-gray-500" selected>Seleccionar modelo</option>
+          {{#each modelos}}
+            <option value={{sku}}>{{denominacion}}</option> 
+          {{/each}}
+        </select>
+        <select class="rounded-md w-full text-lg placeholder-gray-500 p-2 my-2" name="color"> 
+          <option class="text-gray-500" selected>Seleccionar color</option>
+          {{#each colores}}
+            <option value={{codigo}}>{{descripcion}}</option> 
+          {{/each}}
+        </select>
+        {{>buttons_abm ruta = "orden_de_produccion" button = "REGISTRAR"}}
+    </form>
+</div>

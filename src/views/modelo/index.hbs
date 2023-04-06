@@ -1,0 +1,47 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+  <div class="content-tabla shadow-xl mt-8 rounded-lg">
+    <table class="tabla table-fixed w-full">
+      <thead>
+        <tr>
+          <th class="w-1/12 py-2">SKU</th>
+          <th class="py-2">DENOMINACION</th>
+          <th class="py-2">L.INF REPROCESO</th>
+          <th class="py-2">L.SUP REPROCESO</th>
+          <th class="py-2">L.INF OBSERVADO</th>
+          <th class="py-2">L.SUP OBSERVADO</th>
+          <th class="w-1/12 py-2">
+            <a href="/modelo/create">
+              <ion-icon class="mx-1" name="add-outline"></ion-icon>
+            </a>
+            <a href="/nav/menu_administrador">
+              <ion-icon class="mx-1" name="home-outline"></ion-icon>
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each modelos}}
+          <tr>
+            <td class="text-center">{{sku}}</td>
+            <td class="text-center">{{denominacion}}</td>
+            <td class="text-center">{{limite_inf_reproceso}}</td>
+            <td class="text-center">{{limite_sup_reproceso}}</td>
+            <td class="text-center">{{limite_inf_observado}}</td>
+            <td class="text-center">{{limite_sup_observado}}</td>
+            <td class="py-1 flex justify-center">
+              <form action="/modelo/delete" method="POST">
+                <input type="hidden" value="{{sku}}" name="sku">
+                <button class="py-1" type="submit">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </form>
+              <a href="/modelo/edit/{{sku}}" class="py-1 ml-4">
+                <ion-icon name="pencil-outline"></ion-icon>
+              </a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

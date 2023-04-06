@@ -1,0 +1,39 @@
+<div class="color max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+  <div class="content-tabla shadow-xl mt-8 rounded-lg">
+    <table class="tabla table-fixed w-full">
+      <thead>
+        <tr>
+          <th class="w-1/4 py-2">CODIGO</th>
+          <th class="py-2">DESCRIPCION</th>
+          <th class="w-1/4 py-2">
+            <a href="/color/create">
+              <ion-icon class="mx-2" name="add-outline"></ion-icon>
+            </a>
+            <a href="/nav/menu_administrador">
+              <ion-icon class="mx-2" name="home-outline"></ion-icon>
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each colores}}
+          <tr>
+            <td class="text-center">{{codigo}}</td>
+            <td class="text-center">{{descripcion}}</td>
+            <td class="py-1 flex justify-center">
+              <form action="/color/delete" method="POST" class="mx-2">
+                <input type="hidden" value="{{codigo}}" name="codigo">
+                <button class="px-2 py-1 rounded-sm" type="submit">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </form>
+              <a href="/color/edit/{{codigo}}" class="px-2 py-1 rounded-sm mr-2">
+                <ion-icon name="pencil-outline"></ion-icon>
+              </a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

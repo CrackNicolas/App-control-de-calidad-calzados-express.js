@@ -1,0 +1,832 @@
+:root{
+    --color-font-primary : #000000;
+    --color-primary : #00ffff;
+    --color-mensaje : #ff0000;
+    --color-semaforo : #ff0000;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background: var(--color-font-primary);
+    letter-spacing: 2.3px;
+}
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+}
+@media (min-width : 500px){
+    body::-webkit-scrollbar{
+        width: 7px;
+    }
+    body::-webkit-scrollbar-thumb{
+        background: var(--color-primary);
+        border-radius: 30px;
+    }
+}
+textarea{
+    min-height: 100px;
+    max-height: 100px;
+    resize:none;
+}
+.icon-form ion-icon{
+    position: absolute;
+    color: var(--color-primary);
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+}
+.icon-form ion-icon:hover{
+    box-shadow: 0 0 10px 0 var(--color-primary);
+}
+.header{
+    background-color: var(--color-font-primary);
+    border-bottom: 1px solid var(--color-primary);
+    box-shadow: 0 0 10px 0 var(--color-primary), 0 0 20px 0 var(--color-primary), 0 0 40px 0 var(--color-primary);
+}
+.cerrar-sesion ion-icon{
+    margin-top: 2px;
+    margin-right: 4px;
+    width: 25px;
+    height: 25px;
+}
+.cerrar-sesion:hover ion-icon{
+    color: var(--color-primary);
+}
+.cerrar-sesion .link{
+    font-size: 15px;
+}
+.cerrar-sesion .link:hover{
+    color: var(--color-primary);
+}
+.logo{
+    margin-right: 10px;
+    color: var(--color-primary);
+    width: 22px;
+    height: 22px;
+}
+.header strong:hover{
+    cursor: pointer;
+    color: var(--color-primary);
+}
+.icon-button ion-icon{
+    width: 22px;
+    height: 22px;
+    padding-top: 4px;
+}
+
+/**-------Login-------**/
+.login *{
+    background-color: var(--color-font-primary); 
+}
+.login{
+    border: 1px solid var(--color-primary);
+}
+.login button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-font-primary);
+    border: 0.1px solid var(--color-primary);
+}
+.login button:hover{
+    cursor: pointer;
+    color: var(--color-primary);
+    box-shadow: 0 0 10px 0 var(--color-primary), 0 0 10px 0 var(--color-primary);
+    outline: none;
+}
+.login input{
+    outline: none;
+    border: 1px solid var(--color-primary);
+}
+.login input:hover{
+    background-color: var(--color-font-primary);
+    color: var(--color-primary);
+}
+/**-------------------**/
+/**------Mensaje------**/
+.style-mensaje{
+    letter-spacing: 3.3px;
+    background-color: var(--color-font-primary);
+    font-size: 20px;
+    border: 1px solid var(--color-mensaje);
+    color: var(--color-mensaje);
+}
+/**-------------------**/
+
+/**-------Menus-------**/
+.presentacion{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--color-primary);
+}
+.presentacion ion-icon{
+    width: 30px;
+    height: 30px;
+    color: var(--color-primary);
+}
+.presentacion:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 var(--color-primary), 0 0 10px 0 var(--color-primary);
+}
+.items{
+    border: 1px solid var(--color-primary);
+}
+.items:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 var(--color-primary), 0 0 10px 0 var(--color-primary), 0 0 20px 0 var(--color-primary);
+}
+.items:hover ion-icon{
+    animation: animate_icono 1s infinite;
+}
+@keyframes animate_icono{
+    0%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+.items ion-icon{
+    width: 30px;
+    height: 30px;
+    color: var(--color-primary);
+}
+.items p, .items dd{
+    color: var(--color-primary);
+}
+/**-------------------**/
+/**--------ABM--------**/
+.content-tabla{
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+.tabla th{
+    border-bottom: 1px solid var(--color-primary);
+}
+.tabla td, .tabla th{
+    border: 1px solid var(--color-primary);
+}
+.tabla thead ion-icon{
+    width: 25px;
+    height: 25px;
+    color: var(--color-primary);
+}
+.tabla tbody ion-icon{
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+}
+.tabla tbody button{
+    outline: none;
+}
+.tabla .asociar ion-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.tabla .asociar ion-icon:hover{
+    box-shadow: 0 0 10px 0 var(--color-primary), 0 0 15px 0 var(--color-primary), 0 0 30px 0 var(--color-primary);
+}
+.content-pares{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+.content-pares h3{
+    width: 95%;
+}
+.content-pares .icon-1, .content-pares .icon-2{
+    width: 5%;
+}
+.content-pares .icon-1 ion-icon:hover{
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 var(--color-primary), 0 0 20px 0 var(--color-primary);
+}
+.content-pares .icon-1{
+    display: flex;
+    justify-content: flex-start;
+}
+.content-pares .icon-2{
+    display: flex;
+    justify-content: flex-end;
+}
+.content-pares ion-icon{
+    width: 30px;
+    height: 30px;
+}
+.content-pares:hover{
+    box-shadow: 0 0 10px 0 var(--color-primary);
+}
+.content-pares:hover .icon-2 ion-icon{
+    animation: animate_calculator 1s linear infinite;
+}
+@keyframes animate_calculator{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+.create{
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+.create *{
+    background-color: var(--color-font-primary);
+}
+.create button:hover{
+    cursor: pointer;
+    color: var(--color-primary);
+    box-shadow: 0 0 10px 0 var(--color-primary), 0 0 10px 0 var(--color-primary);
+    outline: none;
+}
+.create select{
+    padding: 10px 5px;
+}
+.create input, .create textarea, .create select{
+    outline: none;
+    border: 1px solid var(--color-primary);
+}
+.create input:hover , .create textarea:hover{
+    background-color: var(--color-font-primary);
+    color: var(--color-primary);
+}
+.create button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    background-color: var(--color-font-primary);
+    border: 0.1px solid var(--color-primary);
+}
+/**-------------------**/
+/**-----Orden de produccion-----**/
+.form-op label ion-icon{
+    width: 40px;
+    height: 40px;
+    color: var(--color-primary);
+}
+.form-op label ion-icon:hover{
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 var(--color-primary), 0 0 20px 0 var(--color-primary);
+}
+.form-op .tablero{
+    border: 1px solid var(--color-primary);
+}
+/**-----------------------------**/
+/**---------Inspeccion----------**/
+.tabla-inspeccion td, .tabla-inspeccion tr{
+    border: 1px solid var(--color-primary);
+}
+.tabla-inspeccion th{
+    border-right: 1px solid var(--color-primary);
+}
+.tabla-inspeccion ion-icon{
+    width: 27px;
+    height: 27px;
+    color: var(--color-primary);
+}
+.tabla-inspeccion:hover th ion-icon{
+    animation: animate_clock 0.8s linear infinite;
+}
+@keyframes animate_clock{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(5px);
+    }
+}
+.tabla-inspeccion td a{
+    background-color: var(--color-font-primary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 2px;
+}
+.tabla-inspeccion td a ion-icon{
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+    border-radius: 2px;
+}
+.tabla-inspeccion td a:hover{
+    background-color: var(--color-primary);
+    color: var(--color-font-primary);
+    box-shadow: 0 0 10px 0 var(--color-primary);
+}
+.table-scroll::-webkit-scrollbar{
+    width: 0px;
+}
+.table-scroll::-webkit-scrollbar-thumb{
+    background: var(--color-primary);
+}
+.nav_inspeccionar a{
+    background-color: var(--color-font-primary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+.nav_inspeccionar a:hover{
+    box-shadow: 0 0 10px 0 var(--color-primary), 
+                0 0 20px 0 var(--color-primary);
+}
+/**-----------------------------**/
+/**----------Pantalla-----------**/
+.pantalla .icon-pantalla ion-icon{
+    width: 27px;
+    height: 27px;
+    transform: translateX(-4px);
+    color: var(--color-primary);
+}
+.pantalla .semaforo-off, .pantalla .semaforo-on{
+    outline: none;
+}
+.pantalla .semaforo-off{
+    border: 1px solid var(--color-primary);
+}
+.pantalla .semaforo-on{
+    background-color: var(--color-semaforo);
+    border: none;
+    box-shadow: 0 0 10px 2px var(--color-semaforo), 
+                0 0 20px 2px var(--color-semaforo), 
+                0 0 40px 2px var(--color-semaforo),
+                0 0 60px 2px var(--color-semaforo),
+                0 0 80px 2px var(--color-semaforo),
+                0 0 90px 0 var(--color-semaforo);
+}
+.pantalla .total strong{
+    letter-spacing: 6px;
+}
+.pantalla .total span{
+    background-color: var(--color-font-primary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+.pantalla .total ion-icon{
+    transform: translateY(2.9px);
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+}
+/**-----------------------------**/
+/**-------Probar semaforo-------**/
+.load-view-semaforo span{
+    background-color: var(--color-font-primary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+.load-view-semaforo span strong{
+    letter-spacing: 10px;
+}
+.load-view-semaforo span ion-icon{
+    width: 25px;
+    height: 25px;
+    color: var(--color-primary);
+    transform: translateY(4px);
+}
+.load-view-semaforo section button{
+    outline: none;
+}
+.load-view-semaforo section .semaforo-off{
+    background-color: var(--color-font-primary);
+    border: 1px solid var(--color-primary);
+}
+.load-view-semaforo section .semaforo-on{
+    background-color: var(--color-semaforo);
+    border: none;
+    box-shadow: 0 0 10px 0 var(--color-semaforo),
+                0 0 20px 0 var(--color-semaforo),
+                0 0 40px 0 var(--color-semaforo),
+                0 0 60px 0 var(--color-semaforo),
+                0 0 80px 0 var(--color-semaforo),
+                0 0 100px 0 var(--color-semaforo);
+}
+.load-view-semaforo .values-semaforo a{
+    font-size: 16px;
+    background-color: var(--color-semaforo);
+    color: var(--color-font-primary);
+}
+.load-view-semaforo .values-semaforo a:hover{
+    box-shadow: 0 0 10px 0 var(--color-semaforo), 0 0 20px 0 var(--color-semaforo);
+}
+/**-----------------------------**/
+/**-Config orden de produccion--**/
+.config-orden:hover{
+    box-shadow: 0 0 10px 0 var(--color-primary),
+                0 0 20px 0 var(--color-primary),
+                0 0 40px 0 var(--color-primary);
+}
+/**-----------------------------**/
+/**---------Pagina 404----------**/
+.page-404{
+    color: var(--color-primary);
+}
+.page-404 .number-error{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 35px;
+    font-size: 250px;
+}
+.page-404 ion-icon{
+    width: 70px;
+    height: 70px;
+}
+.page-404 .title-error{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    margin-top: -60px;
+    font-size: 16px;
+}
+.page-404 .bugs ion-icon{
+    background: transparent;
+}
+.page-404 .bugs ion-icon:nth-child(1), .page-404 .bugs ion-icon:nth-child(3){
+    color: var(--color-mensaje);
+}
+.page-404 .bugs ion-icon:nth-child(2){
+    position: relative;
+    z-index: 100;
+}
+.page-404 .bugs ion-icon:nth-child(1){
+    transform: rotate(100grad);
+    animation: animate_bug_1 5s infinite;   
+}
+.page-404 .bugs ion-icon:nth-child(2){
+    animation: animate_bug_2 5s infinite;   
+}
+.page-404 .bugs ion-icon:nth-child(3){
+    transform: rotate(-100grad);
+    animation: animate_bug_3 5s infinite;
+}
+@keyframes animate_bug_1{
+    0%{
+        color: var(--color-primary);
+        transform: translateX(205px);
+    }
+}
+@keyframes animate_bug_2{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+@keyframes animate_bug_3{
+    0%{
+        color: var(--color-primary);
+        transform: translateX(-205px);
+    }
+}
+/**-----------------------------**/
+
+/**----------Responsive---------**/
+/**-------Menus------**/
+@media (max-width : 1210px){
+    .login{
+        width: 40%;
+    }
+}
+@media (max-width : 1050px){
+    .login{
+        width: 50%;
+    }
+}
+@media (max-width : 830px){
+    .login{
+        width: 60%;
+    }
+}
+@media (max-width : 685px){
+    .login{
+        width: 70%;
+    }
+}
+@media (max-width : 515px){
+    .login h1{
+        text-align: end;
+        font-size: 20px;
+    }
+}
+@media (max-width : 370px){
+    .login h1{
+        font-size: 16px;
+    }
+}
+@media (max-width : 412px){
+    .header strong, .header .cerrar-sesion .link{
+        font-size: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0px;
+    }
+}
+@media (max-width : 347px){
+    .header strong, .header .cerrar-sesion .link{
+        letter-spacing: -1px;
+    }
+}
+@media (max-width : 320px){
+    .header strong, .header .cerrar-sesion .link{
+        letter-spacing: -1.5px;
+    }
+}
+@media (max-width : 677px){
+    .header{
+        padding-top: 0px;
+        padding-bottom: 40px;
+    }
+    .header .flex{
+        margin-left: 10px;
+    }
+    .header strong, .header .cerrar-sesion .link{
+        font-size: 13px;
+    }
+    .header .logo{
+        width: 15px;
+        height: 15px;
+    }
+    .header .cerrar-sesion ion-icon{
+        margin-top: 11px;
+        width: 15px;
+        height: 15px;
+    }
+    .header .cerrar-sesion .link{
+        margin-right: -15px;
+        margin-top: 11px;
+    }
+    .login{
+        width: 80%;
+    }
+}
+/**-----Mensaje-----**/
+@media (max-width : 639px){
+    .mensaje{
+        width: 95%;
+    }
+}
+/**------Menus------**/
+@media (max-width : 768px){
+    .mensaje{
+        width: 95%;
+    }
+    .menu-user a{
+        display: block;
+    }
+}
+/**-----Colores------**/
+@media (max-width : 392){
+    .color{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+@media (max-width : 1030px){
+    .create{
+        width: 50%;
+    }
+}
+@media (max-width : 690px){
+    .create{
+        width: 60%;
+    }
+}
+@media (max-width : 580px){
+    .create{
+        width: 70%;
+    }
+    .create h1{
+        text-align: end;
+    }
+}
+@media (max-width : 650px){
+    .create{
+        width: 80%;
+    }
+    .create h1{
+        font-size: 16px;
+        text-align: end;
+    }
+}
+@media (max-width : 1150px){
+    .content-tabla{
+        overflow-x: scroll;
+        width: 98%;
+        margin-left: 5px;
+    } 
+    .tabla{
+        width: 1150px;
+    }
+    .content-tabla::-webkit-scrollbar{
+        height: 13px;
+    }
+    .content-tabla::-webkit-scrollbar-thumb{
+        background-color: var(--color-primary);
+        border-radius: 20px;
+    }
+}
+/**----------Semaforo------------**/
+@media (max-width : 430px){
+    .values-semaforo{
+        margin-top: -10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .values-semaforo a{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .info span{
+        padding-left: 19px;
+        padding-right: 10px;
+        font-size: 13px;
+    }
+}
+/**---------Page 404------------**/
+@media (max-width : 600px){
+    .page-404 .number-error{
+        font-size: 150px;
+    }
+    .page-404 .title-error{
+        margin-top: 10px;
+        padding: 0px 45px;
+    }
+    .page-404 .bugs ion-icon{
+        width: 35px;
+        height: 35px;
+    }
+}
+@media (max-width : 440px){
+    .page-404 .number-error{
+        font-size: 120px;
+    }
+    .page-404 .title-error{
+        margin-top: 10px;
+        padding: 0px 30px;
+    }
+}
+/**-----Nav de inspecciones-----**/
+@media (max-width : 1245px){
+    .nav_inspeccionar a{
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+@media (max-width : 1150px){
+    .content-pares{
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+    .nav_inspeccionar{
+        margin-left: 30px;
+        margin-right: 40px;
+    }
+}
+@media (max-width : 1023px){
+    .nav_inspeccionar{
+        margin-left: 20px;
+        margin-right: 40px;
+    }
+    .content-pares{
+        margin-right: 13px;
+    }
+}
+@media (max-width : 435px){
+    .nav_inspeccionar{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav_inspeccionar a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .content-pares h3{
+        font-size: 15px;
+    }
+    .content-pares a ion-icon{
+        max-width: 20px;
+        min-height: 20px;
+    }
+}
+@media (max-width : 360px){
+    .content-pares h3{
+        font-size: 12px;
+    }
+    .tabla th{
+        font-size: 12px;
+    }
+}
+@media (max-width : 639px){
+    .nav_inspeccionar{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .content-pares{
+        margin-right: 8px;
+    }
+}
+@media (max-width : 1087px){
+    .nav_inspeccionar{
+        display: flex;
+        gap: 0px;
+    }
+    .nav_inspeccionar a{
+        font-size: 15px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+@media (max-width : 852px){
+    .nav_inspeccionar{
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+/**----------Inspeccion---------**/
+@media (max-width : 1050px){
+    .tabla-header th, .tabla-header td{
+        font-size: 13px;
+    }
+    .tabla-inspeccion th, .tabla-inspeccion td{
+        font-size: 15px;
+    }
+}
+@media (max-width : 880px){
+    .tabla-header th, .tabla-header td{
+        font-size: 10px;
+    }
+    .tabla-inspeccion a ion-icon{
+        max-width: 15px;
+        max-height: 15px;
+    }
+}
+@media (max-width : 475px){
+    .tabla-header th, .tabla-header td{
+        font-size: 8px;
+    }
+}
+@media (max-width : 360px){
+    .tabla-header th, .tabla-header td{
+        font-size: 6px;
+    }
+}
+/**----------Pantalla-----------**/
+@media (max-width : 960px){
+    .pantalla div:nth-child(1){
+        margin-top: 30px;
+    }
+    .pantalla div:nth-child(3){
+        margin-bottom: -50px;
+    }
+    .pantalla div{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .pantalla div section{
+        position: fixed;
+        left: 40px;
+    }
+    .pantalla div section span{
+        order: 2;
+        margin-left: 10px;
+    }
+    .pantalla div section button{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media (max-width : 640px){
+    .pantalla div section{
+        left: 30px;
+    }
+    .pantalla div section span{
+        font-size: 13px;
+    }
+}
+@media (max-width : 360px){
+    .pantalla div section{
+        left: 18px;
+    }
+    .pantalla div section span{
+        font-size: 12px;
+    }
+}
+/**-----------------------------**/

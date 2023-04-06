@@ -1,0 +1,22 @@
+<div class="create block mx-auto my-12 px-4 py-3 w-1/3 rounded-lg shadow-lg">
+    <div class="icon-form">
+        <ion-icon name="add-outline"></ion-icon>
+    </div>
+    <h1 class="text-center text-3xl font-bold">CREAR TURNO</h1>
+    <form action="" method="POST" class="mt-4">
+        <input type="text" class="rounded-md w-full text-lg placeholder-gray-500 p-2 my-2" placeholder="Descripcion..." name="descripcion">
+        <select class="rounded-md w-full text-lg placeholder-gray-500 p-2 my-2" name="hora_inicio"> 
+          <option class="text-gray-500" selected>Seleccionar hora de inicio</option>
+          {{#each horas}}
+            <option value={{id}}>{{id}}</option>
+          {{/each}}
+        </select>
+        <select class="rounded-md w-full text-lg placeholder-gray-500 p-2 my-2" name="hora_fin"> 
+          <option class="text-gray-500" selected>Seleccionar hora de fin</option>
+          {{#each horas}}
+            <option value={{id}}>{{id}}</option>
+          {{/each}}
+        </select>
+        {{>buttons_abm ruta = "turno" button = "REGISTRAR"}}
+    </form>
+</div>

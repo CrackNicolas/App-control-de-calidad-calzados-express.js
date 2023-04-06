@@ -1,0 +1,79 @@
+<div class="pantalla max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+  <div class="content-tabla overflow-hidden shadow-xl mt-8 rounded-lg">
+    <div class="my-10">
+        <section class="flex w-25 float-right">
+          <span class="mt-2 mr-5">
+            <strong>REPROCESO</strong>
+          </span> 
+          {{#if semaforo_reproceso_green}}
+            <button class="semaforo-on w-10 h-10 rounded-full mx-7" style="--color-semaforo:{{semaforo_reproceso_green}}"></button>
+          {{else}}
+            <button class="semaforo-off w-10 h-10 rounded-full mx-7"></button>
+          {{/if}}
+          {{#if semaforo_reproceso_yellow}}
+            <button class="semaforo-on w-10 h-10 rounded-full mx-7" style="--color-semaforo:{{semaforo_reproceso_yellow}}"></button>
+          {{else}}
+            <button class="semaforo-off w-10 h-10 rounded-full mx-7"></button>
+          {{/if}}
+          {{#if semaforo_reproceso_red}}
+            <button class="semaforo-on w-10 h-10 rounded-full mx-7" style="--color-semaforo:{{semaforo_reproceso_red}}"></button>
+          {{else}}
+            <button class="semaforo-off w-10 h-10 rounded-full mx-7"></button>
+          {{/if}}
+        </section>
+      </div>
+      <div class="my-10">
+        <section class="flex bg-black-500 w-25 float-left">
+          {{#if semaforo_observado_green}}
+            <button class="semaforo-on w-10 h-10 rounded-full mx-7" style="--color-semaforo:{{semaforo_observado_green}}"></button>
+          {{else}}
+            <button class="semaforo-off w-10 h-10 rounded-full mx-7"></button>
+          {{/if}}
+          {{#if semaforo_observado_yellow}}
+            <button class="semaforo-on w-10 h-10 rounded-full mx-7" style="--color-semaforo:{{semaforo_observado_yellow}}"></button>
+          {{else}}
+            <button class="semaforo-off w-10 h-10 rounded-full mx-7"></button>
+          {{/if}}
+          {{#if semaforo_observado_red}}
+            <button class="semaforo-on w-10 h-10 rounded-full mx-7" style="--color-semaforo:{{semaforo_observado_red}}"></button>
+          {{else}}
+            <button class="semaforo-off w-10 h-10 rounded-full mx-7"></button>
+          {{/if}}
+          <span class="pt-2 ml-5">
+            <strong>OBSERVADO</strong>
+          </span> 
+        </section>
+      </div>
+    <table class="tabla table-fixed w-full mt-11">
+      <thead>
+        <tr>
+          <th class="py-2">DESCRIPCION</th>
+          <th class="py-2">TIPO DE DEFECTO</th>
+          <th class="py-2">ULTIMA HORA</th>
+          <th class="py-2">CANTIDAD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <div class="text-center my-4">
+          <a href="/nav/menu_supervisor_calidad" class="icon-pantalla">
+            <ion-icon name="home-outline"></ion-icon>
+          </a>
+        </div>
+        {{#each defectos}}
+          <tr>
+            <td class="text-center py-2">{{descripcion}}</td>
+            <td class="text-center py-2">{{tipo_defecto}}</td>
+            <td class="text-center py-2">{{hora}}</td>
+            <td class="text-center py-2">{{cantidad}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="total mt-10 max-w-7xl mx-auto sm:px-6 lg:px-8 text-center">
+    <span class="font-semibold rounded-full mt-12 py-2 pr-6 pl-2">
+      <ion-icon name="calculator-outline"></ion-icon>
+      <strong>TOTAL DEFECTOS {{total}}</strong>
+    </span>
+  </div>
+</div>

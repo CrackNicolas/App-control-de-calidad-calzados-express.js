@@ -1,0 +1,79 @@
+{{>nav_inspeccionar}}
+{{>message_inspeccion message = message color = color_message icon = icon}}
+<div class="mt-5 max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <div class="content-tabla rounded-t-md shadow-xl my-4 pt-2">
+    <h2 class="mb-2 text-center text-lg font-bold">
+      <strong>INFORME DE OBSERVADO</strong>
+    </h2>
+    <table class="tabla-header tabla-inspeccion table-fixed w-full">
+      <thead>
+        <tr class="border-t">
+          <th class="w-1/4 py-1 border-r">ORDEN DE PRODUCCION</th>
+          <th class="py-1 border-r">MODELO</th>
+          <th class="py-1 border-r">COLOR</th>
+          <th class="py-1 border-r">REALIZADO POR</th>
+          <th class="py-1 border-r">FECHA</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#with orden_de_produccion}}
+          <tr>
+            <td class="text-center p-1">{{numero}}</td>
+            <td class="text-center p-1">{{modelo.denominacion}}</td>
+            <td class="text-center p-1">{{color.descripcion}}</td>
+            <td class="text-center p-1">{{empleado.dni}}</td>
+            <td class="text-center p-1">{{fecha_inicio}}</td>
+          </tr>
+        {{/with}}
+      </tbody>
+    </table>
+    <div class="table-scroll overflow-x-auto mx-auto">
+      <table class="tabla-inspeccion w-full mt-2">
+        <thead>
+          <tr>
+            <th colspan="1" class="py-1 border-r">
+              <ion-icon name="alarm-outline"></ion-icon>
+            </th>
+            {{#each horas_turno}}
+              <th colspan="2" class="border-r">{{hora}}</th>
+            {{/each}}
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-center px-12 py-1 border-r">Defecto</td>
+                {{#each horas_turno}}
+                  <td class="text-center font-semibold px-12">Izq</td>
+                  <td class="text-center font-semibold px-12 border-r">Der</td>
+                {{/each}}
+              </tr>
+              {{#each defectos}}
+                <tr class="border-b">
+                  <td class="text-center p-1 font-minibold border-r">{{defecto.descripcion}}</td> 
+                  {{#each horas}}
+                    <td class="text-center font-minibold px-12 py-3">
+                      <a class="px-10 pt-2 font-semibold" href="/inspeccionar/observado/incidencia/{{defect}}/Izquierdo/{{hora}}/+">
+                        <ion-icon name="add-outline"></ion-icon>
+                      </a>
+                      <p class="p-1 mb-2 font-semibold">{{cantidad.izq}}</p>
+                      <a class="px-10 pt-2 font-semibold" href="/inspeccionar/observado/incidencia/{{defect}}/Izquierdo/{{hora}}/-">
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </a>
+                    </td>
+                    <td class="text-center font-minibold px-12 py-3 border-r">
+                      <a class="px-10 pt-2 font-semibold" href="/inspeccionar/observado/incidencia/{{defect}}/Derecho/{{hora}}/+">
+                        <ion-icon name="add-outline"></ion-icon>
+                      </a>
+                      <p class="p-1 mb-2 font-semibold">{{cantidad.der}}</p>
+                      <a class="px-10 pt-2 font-semibold" href="/inspeccionar/observado/incidencia/{{defect}}/Derecho/{{hora}}/-">
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </a>
+                    </td>
+                  {{/each}}
+                </tr>          
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>

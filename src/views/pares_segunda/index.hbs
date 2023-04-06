@@ -1,0 +1,32 @@
+{{>nav_inspeccionar}}
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <div class="content-pares mt-8 mx-auto text-center rounded-md p-3">
+    <a class="icon-1" href="/pares_segunda/create">
+      <ion-icon class="mx-1" name="add-circle-outline"></ion-icon>
+    </a>
+    <h3 class="font-bold text-lg">REGISTRAR PARES DE SEGUNDA</h3>
+    <div class="icon-2">
+      <ion-icon class="mx-1" name="calculator-outline"></ion-icon>
+    </div>
+  </div>
+  <div class="content-tabla overflow-hidden shadow-xl mt-8 rounded-lg">
+    <table class="tabla table-fixed w-full">
+      <thead>
+        <tr>
+          <th class="py-2">NUMERO DE ORDEN DE PRODUCCION</th>
+          <th class="py-2">FECHA INICIO</th>
+          <th class="py-2">CANTIDAD DE PARES DE SEGUNDA</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#with orden_de_produccion}}
+          <tr>
+            <td class="text-center py-2">{{numero}}</td>
+            <td class="text-center py-2">{{fecha_inicio}}</td>
+            <td class="text-center py-2">{{pares_de_segunda}}</td>
+          </tr>
+        {{/with}}
+      </tbody>
+    </table>
+  </div>
+</div>
